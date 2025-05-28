@@ -1,11 +1,8 @@
 #ifndef THREAD_SAFE_QUEUE_H
 #define THREAD_SAFE_QUEUE_H
 
-
-#include <iostream>
 #include <mutex>
 #include <queue>
-#include <functional>
 #include <condition_variable>
 
 

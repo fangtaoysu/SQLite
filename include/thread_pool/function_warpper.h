@@ -1,7 +1,6 @@
 #ifndef FUNCTION_WARPPER_H
 #define FUNCTION_WARPPER_H
 
-#include <iostream>
 #include <memory>
 
 

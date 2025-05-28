@@ -5,6 +5,7 @@
 #include <thread>
 #include <type_traits>
 #include <future>
+#include <iostream>
 
 #include "./function_warpper.h"
 #include "./thread_safe_queue.h"

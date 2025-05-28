@@ -1,7 +1,6 @@
 #ifndef JOIN_THREADS_H
 #define JOIN_THREADS_H
 
-#include <iostream>
 #include <vector>
 #include <thread>
 
