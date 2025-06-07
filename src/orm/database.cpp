@@ -1,6 +1,8 @@
 #include "../../include/orm/database.h"
 #include <iostream>
 #include <fstream>
+#include <chrono>
+#include <iomanip>
 
 // TODO: cout 转为日志信息
 
@@ -42,6 +44,9 @@ void orm::Database::WriteSqlToFile(const std::string& sql) {
 
 void orm::Database::PrintError(Error err, const std::string& sql) {
     const std::string info("数据库文件: " + _filename + ",执行sql语句:" + sql + ", ");
+    auto now = std::chrono::system_clock::now();
+    auto now_time_t = std::chrono::system_clock::to_time_t(now);
+    std::cerr << std::put_time(std::localtime(&now_time_t), "【%Y-%m-%d %H:%M:%S】");
     switch (err)
     {
         case Error::EMPTY_SQL:
