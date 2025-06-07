@@ -1,4 +1,5 @@
 #include "../../include/thread_pool/thread_pool.h"
+#include <iostream>
 
 
 ThreadPool::ThreadPool() : _done(false), _joiner(_threads) {

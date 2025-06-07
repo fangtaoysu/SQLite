@@ -1,5 +1,4 @@
-#ifndef FUNCTION_WARPPER_H
-#define FUNCTION_WARPPER_H
+#pragma once
 
 #include <memory>
 
@@ -47,6 +46,3 @@ class FunctionWarpper {
     FunctionWarpper(FunctionWarpper&)=delete;
     FunctionWarpper& operator=(const FunctionWarpper&)=delete;
 };
-
-
-#endif

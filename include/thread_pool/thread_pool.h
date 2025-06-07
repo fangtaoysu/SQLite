@@ -1,9 +1,7 @@
-#ifndef THREAD_POOL_H
-#define THREAD_POOL_H
+#pragma once
 
 #include <type_traits>
 #include <future>
-#include <iostream>
 
 #include "./function_warpper.h"
 #include "./thread_safe_queue.h"
@@ -44,5 +42,3 @@ std::future<typename std::result_of<FunctionType()>::type> ThreadPool::submit(Fu
     _work_queue.push(std::move(task));
     return res;
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef JOIN_THREADS_H
-#define JOIN_THREADS_H
+#pragma once
 
 #include <vector>
 #include <thread>
@@ -23,6 +22,3 @@ class JoinThreads {
         }
     }
 };
-
-
-#endif

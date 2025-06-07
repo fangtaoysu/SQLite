@@ -22,6 +22,11 @@ add_library(memory_pool
     src/memory/memory_pool.cpp  # 确保这个文件存在
 )
 
+# 添加orm
+add_library(orm
+    src/orm/database.cpp
+)
+
 # 设置线程池头文件目录
 target_include_directories(thread_pool PUBLIC 
     ${CMAKE_SOURCE_DIR}/include/thread_pool/
@@ -30,6 +35,11 @@ target_include_directories(thread_pool PUBLIC
 # 设置内存池头文件目录（修正：必须在 add_library 之后）
 target_include_directories(memory_pool PUBLIC 
     ${CMAKE_SOURCE_DIR}/include/memory/
+)
+
+# 设置orm头文件目录
+target_include_directories(orm PUBLIC
+    ${CMAKE_SOURCE_DIR}/include/orm
 )
 
 # 链接系统线程库
@@ -52,4 +62,13 @@ add_executable(memory_pool_test
 target_link_libraries(memory_pool_test
     memory_pool
     Threads::Threads  # 如果测试需要多线程
+)
+
+# 构建orm测试
+add_executable(orm_test
+tests/orm_test.cpp
+)
+
+target_link_libraries(orm_test
+    orm
 )

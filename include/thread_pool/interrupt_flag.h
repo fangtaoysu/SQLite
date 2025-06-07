@@ -1,5 +1,4 @@
-#ifndef INTERRUPT_FLAG_H
-#define INTERRUPT_FLAG_H
+#pragma once
 
 #include <atomic>
 #include <condition_variable>
@@ -47,6 +46,3 @@ class InterruptFlag {
         }
     };
 };
-
-
-#endif

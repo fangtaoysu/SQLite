@@ -1,5 +1,4 @@
-#ifndef INTERRUPTIBLE_THREAD_H
-#define INTERRUPTIBLE_THREAD_H
+#pragma once
 
 #include "interrupt_flag.h"
 #include <future>
@@ -35,6 +34,3 @@ class InterruptibleThread {
         }
     }
 };
-
-
-#endif

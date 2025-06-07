@@ -1,5 +1,4 @@
-#ifndef THREAD_SAFE_QUEUE_H
-#define THREAD_SAFE_QUEUE_H
+#pragma once
 
 #include <mutex>
 #include <queue>
@@ -59,6 +58,3 @@ class ThreadSafeQueue {
         return _data_queue.empty();
     }
 };
-
-
-#endif
